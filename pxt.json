@@ -11,7 +11,8 @@
         "assets.json",
         "activity1.md",
         "activity3.md",
-        "activity2.md"
+        "activity2.md",
+        "skillmap.md"
     ],
     "testFiles": [
         "test.ts"
