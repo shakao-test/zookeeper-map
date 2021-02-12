@@ -117,11 +117,19 @@ mySprite.setVelocity(randint(-50, 50), randint(-50, 50))
 mySprite.setBounceOnWall(true)
 ```
 
-## Step 5 
+## Step 5 @showdialog
 
 This exhibit looks awesome! The other kids at the zoo are going to 
-love it. But, uh-oh, we're getting a report from the penguin department--the
-penguins did what? Oh no, you better get over there!
+love it-- what's that sound?
+
+## Step 6 @showdialog
+
+An alarm? What's going on?
+
+## Step 7 @showdialog
+
+Hold on, we're getting a report from the penguin department-- the
+penguins did *what*? Oh no! You better get over there!
 
 ```template
 tiles.setTilemap(tilemap`level1`)
