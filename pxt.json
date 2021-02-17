@@ -7,16 +7,12 @@
     },
     "files": [
         "main.blocks",
-        "main.ts",
         "README.md",
         "assets.json",
         "activity1.md",
         "activity3.md",
         "activity2.md",
         "skillmap.md"
-    ],
-    "testFiles": [
-        "test.ts"
     ],
     "targetVersions": {
         "target": "1.3.44",
