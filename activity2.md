@@ -9,6 +9,7 @@ block into ``||loops:on start|``. Click on the grey box in
 see at the zoo.
 
 ```blocks
+tiles.setTilemap(tilemap`level1`)
 let mySprite = sprites.create(img`
     . . . . . . 5 5 5 . . . . . . . 
     . . . . 5 5 5 5 5 5 5 . . . . . 
@@ -38,6 +39,7 @@ should start moving! Try changing the numbers next to **vx** and **vy**
 and see what happens.
 
 ```blocks
+tiles.setTilemap(tilemap`level1`)
 let mySprite = sprites.create(img`
     . . . . . . 5 5 5 . . . . . . . 
     . . . . 5 5 5 5 5 5 5 . . . . . 
@@ -67,6 +69,7 @@ Put one of these into the **vx** slot and one into **vy**. Change the numbers
 around to see different kinds of movement!
 
 ```blocks
+tiles.setTilemap(tilemap`level1`)
 let mySprite = sprites.create(img`
     . . . . . . 5 5 5 . . . . . . . 
     . . . . 5 5 5 5 5 5 5 . . . . . 
@@ -95,6 +98,7 @@ You can fix that by taking the ``||sprites:set [mySprite] bounce on wall <on>||`
 block and snapping it in at the end of the program.
 
 ```blocks
+tiles.setTilemap(tilemap`level1`)
 let mySprite = sprites.create(img`
     . . . . . . 5 5 5 . . . . . . . 
     . . . . 5 5 5 5 5 5 5 . . . . . 
@@ -124,12 +128,12 @@ love it-- what's that sound?
 
 ## Step 6 @showdialog
 
-An alarm? What's going on?
+An alarm? What's going on-- Hold on, we're getting a report from the penguin department-- the
+penguins did *what*? 
 
-## Step 7 @showdialog
+## Step 7
+Oh no! You better get over there!
 
-Hold on, we're getting a report from the penguin department-- the
-penguins did *what*? Oh no! You better get over there!
 
 ```template
 tiles.setTilemap(tilemap`level1`)
