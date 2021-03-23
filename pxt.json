@@ -13,7 +13,8 @@
         "activity3.md",
         "activity2.md",
         "skillmap.md",
-        "activity4.md"
+        "activity4.md",
+        "activity2-2.md"
     ],
     "targetVersions": {
         "target": "1.4.28",
