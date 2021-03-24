@@ -1,4 +1,4 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.4.28/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.16","target":"arcade","targetVersion":"1.4.28","repo":"shakao-test/zookeeper-map"}
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.4.28/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.17","target":"arcade","targetVersion":"1.4.28","repo":"shakao-test/zookeeper-map"}
 // total=1142755 new=6.23% cached=88.14% other=5.64%
 (function (ectx) {
 'use strict';
@@ -382,7 +382,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P214767(s) {
+function _main___P214830(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -750,13 +750,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P214767.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/device/startup.ts","functionName":"<main>","argumentNames":[]}
-_main___P214767.continuations = [  ]
+_main___P214830.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/device/startup.ts","functionName":"<main>","argumentNames":[]}
+_main___P214830.continuations = [  ]
 
-function _main___P214767_mk(s) {
+function _main___P214830_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P214767, depth: s.depth + 1,
+        parent: s, fn: _main___P214830, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -38770,5 +38770,5 @@ const sprites_StaticObstacle__C200870_VT = mkVTable({
 
 const breakpoints = setupDebugger(1, [])
 
-return _main___P214767
+return _main___P214830
 })
