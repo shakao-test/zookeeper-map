@@ -44,7 +44,10 @@ Now, throw it into the panda enclosure!
 From the ``||scene:Scene||`` drawer, pull out a 
 ``||scene: place [mySprite] on top of random [ ]||`` block and select 
 the **grass** tile. This will **place** your bamboo on a **random** 
-patch of grass.
+patch of grass. 
+
+Click on the simulator to the left and use the spacebar or the 
+**A** button to drop some bamboo in!
 
 ```blocks
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -77,9 +80,8 @@ Aw, the panda isn't very good at finding the food... let's help them out!
 From the ``||sprites:Sprites||`` drawer, drag a 
 ``||sprites:set [myEnemy] follow [mySprite] ⊕||`` block into the bottom
 of the ``||controller:on A button pressed||`` container. Change
-the first variable to ``||variables:panda||``. 
-
-Use the spacebar to drop some bamboo in!
+the first variable to ``||variables:panda||`` and try your code out 
+in the simulator.
 
 ```blocks
 let panda:Sprite = null;
@@ -132,9 +134,8 @@ overlaps container. The panda should destroy the food!
 To tell the **destroy** block that you want it to affect the overlapping food, 
 click on the ``||variables:otherSprite||`` variable from the top of the 
 **overlaps** container and drag it down to replace the 
-``||variables:mySprite||`` argument in ``||sprites:destroy [mySprite] ⊕||``.
-
-Watch that panda go in the simulator!
+``||variables:mySprite||`` argument in ``||sprites:destroy [mySprite] ⊕||``. 
+Way to go! That panda's getting a full meal!
 
 ```blocks
 namespace SpriteKind {

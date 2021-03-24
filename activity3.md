@@ -14,6 +14,10 @@ block to see the code for spawning penguins.
 
 You can click on the simulator and use the arrow keys to look around!
 
+When you've helped the penguins back into the exhibit, you'll get a 
+"Game over!" message. You can then click on the **Finish** button to
+continue to other parts of the zoo.
+
 ```template
 namespace SpriteKind {
     export const Penguin = SpriteKind.create()

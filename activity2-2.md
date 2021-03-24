@@ -35,8 +35,8 @@ let mySprite = sprites.create(img`
 Just keep swimming!
 
 Find the ``||sprites:set [mySprite] x to [0]||`` block 
-and drag it into the ``||loops:on start||`` container.  
-Replace **x** with **vx (velocity x)** using the dropdown menu.
+and drag it into the ``||loops:on start||`` container. Replace **x** 
+with **vx (velocity x)** using the dropdown menu.
 Try changing the number and see what happens!
 
 ```blocks
@@ -99,8 +99,8 @@ mySprite.setBounceOnWall(true)
 ## Step 4
 Let's make this a little more exciting with some **randomness**.
 
-Find the ``||sprites:set [mySprite] x to [0]||`` block 
-and drag it to the bottom of the ``||loops:on start||`` container.  
+Grab a **new** ``||sprites:set [mySprite] x to [0]||`` block 
+and drag it to the bottom of the ``||loops:on start||`` container. 
 Replace **x** with **y** using the dropdown menu.
 
 Now, from the ``||math:Math||`` category, grab a 
