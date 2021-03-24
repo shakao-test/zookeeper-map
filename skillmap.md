@@ -1,10 +1,9 @@
 # skillmap
-* name: testmap
-* description: narrative map
-
-## zookeeper
 * name: Zookeeper
 * description: You're a zookeeper!
+
+## zookeeper
+* name: Zookeeper Path
 
 ### zoo-activity1
 * allowcodecarryover: false
