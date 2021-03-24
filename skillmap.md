@@ -36,7 +36,7 @@
 * description: Penguins?
 * url: https://github.com/shakao-test/zookeeper-map/activity3
 * tags: easy
-* next: zoo-activity5
+* next: zoo-activity4
 
 ### zoo-activity4
 * name: Feed the Panda
@@ -52,7 +52,6 @@
 * description: Quail! Everywhere! Use code to catch these speedy birds!
 * url: https://github.com/shakao-test/zookeeper-map/activity4
 * tags: intermediate
-* next: zoo-complete
 
 ### zoo-complete
 * name: Congrats!
