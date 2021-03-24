@@ -27,15 +27,13 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Quail, function (sprite, otherSp
 ```
 
 ## Step 3
-Now, when you grab the quail, it should start following you. 
+When you grab the quail, we want it to start following you. 
 
 From the ``||sprites:Sprites||`` drawer, drag a 
 ``||sprites:set [myEnemy] follow [mySprite] ⊕||`` block into the bottom
-of the **overlaps** container.
-
-Click on the ``||variables:otherSprite||`` variable from the top of the 
+of the **overlaps** container. Then click on the ``||variables:otherSprite||`` variable from the top of the 
 **overlaps** container and drag it down to replace the 
-``||variables:mySprite||`` argument.
+``||variables:myEnemy||`` argument.
 
 ```blocks
 namespace SpriteKind {
@@ -43,7 +41,7 @@ namespace SpriteKind {
 }
 let mySprite: Sprite = null;
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Quail, function (sprite, otherSprite) {
-    otherSprite.follow(mySprite, 70)
+    otherSprite.follow(mySprite)
 })
 ```
 
@@ -64,7 +62,7 @@ namespace SpriteKind {
     export const Caught = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Quail, function (sprite, otherSprite) {
-    otherSprite.follow(sprite, 70)
+    otherSprite.follow(sprite)
     otherSprite.setKind(SpriteKind.Caught)
 })
 ```
@@ -122,7 +120,7 @@ namespace SpriteKind {
     export const Caught = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Egg, function (sprite, otherSprite) {
-    otherSprite.follow(sprite, 70)
+    otherSprite.follow(sprite)
     otherSprite.setKind(SpriteKind.Caught)
 })
 ```
