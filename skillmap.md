@@ -1,6 +1,7 @@
 # skillmap
 * name: testmap
 * description: narrative map
+* allowcodecarryover: false
 
 ## zookeeper
 * name: Zookeeper
