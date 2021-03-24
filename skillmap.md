@@ -1,13 +1,13 @@
 # skillmap
 * name: testmap
 * description: narrative map
-* allowcodecarryover: false
 
 ## zookeeper
 * name: Zookeeper
 * description: You're a zookeeper!
 
 ### zoo-activity1
+* allowcodecarryover: false
 * name: Zookeeper Hut
 * type: tutorial
 * next: zoo-activity2, zoo-activity2-2
@@ -16,6 +16,7 @@
 * tags: easy
 
 ### zoo-activity2
+* allowcodecarryover: false
 * name: By Land
 * type: tutorial
 * description: Set up a zoo exhibit! Let's take a stroll to the mammal enclosures and get your first exhibit all set up.
@@ -24,6 +25,7 @@
 * next: zoo-activity3
 
 ### zoo-activity2-2
+* allowcodecarryover: false
 * name: By Sea
 * type: tutorial
 * description: It's aquarium time! Let's go to the ocean exhibits and design some sea creatures.
@@ -32,6 +34,7 @@
 * next: zoo-activity3
 
 ### zoo-activity3
+* allowcodecarryover: false
 * name: Penguins
 * type: tutorial
 * description: Penguins?
@@ -40,6 +43,7 @@
 * next: zoo-activity4
 
 ### zoo-activity4
+* allowcodecarryover: false
 * name: Feed the Panda
 * type: tutorial
 * description: It's feeding time! Grab your bucket of bamboo and head over to the panda enclosure.
@@ -48,6 +52,7 @@
 * next: zoo-activity5, zoo-complete
 
 ### zoo-activity5
+* allowcodecarryover: false
 * name: Quail Hatching
 * type: tutorial
 * description: Quail! Everywhere! Use code to catch these speedy birds!
@@ -55,6 +60,7 @@
 * tags: intermediate
 
 ### zoo-complete
+* allowcodecarryover: false
 * name: Congrats!
 * kind: completion
 * type: certificate
