@@ -8,11 +8,11 @@ click that green **OK** button to see the **Keeper's Hut**.
 
 ## Step 1
 
-Here it is! Home sweet home. Let's get you set up. From 
-``||sprites:Sprites||``, drag the ``||variables:set mySprite to||`` 
-block into ``||loops:on start|``. Click on the grey box in 
-``||variables:set mySprite to||`` and draw yourself in your best 
-zookeeper outfit!
+Here it is! Home sweet home. Let's get you set up. 
+
+From the ``||sprites:Sprites||`` category, drag the ``||variables:set [mySprite] to sprite [ ] of kind [Player]||`` 
+block into ``||loops:on start||``. Then click the grey box and draw yourself 
+in your best zookeeper outfit!
 
 ```blocks
 tiles.setTilemap(tilemap`level2`)
@@ -39,8 +39,9 @@ let mySprite = sprites.create(img`
 ## Step 2 
 
 Let's get moving! From ``||controller:Controller||``, drag the 
-``||controller:move mySprite with buttons||`` block **after** 
-``||variables:set mySprite to||``. 
+``||controller:move [mySprite] with buttons ⊕||`` block 
+into the bottom of the ``||loops:on start||`` container. 
+
 This will allow you to move your sprite around the screen. 
 Try it out in the simulator using the arrow keys on your keyboard 
 or by clicking the joystick.
@@ -72,7 +73,8 @@ controller.moveSprite(mySprite)
 
 Finally, take a look around the room. 
 Drag ``||scene:camera follow sprite [mySprite]||`` into the bottom 
-of the ``||loops:on start||`` container and use the arrow keys to walk around!
+of the ``||loops:on start||`` container and use the arrow keys to 
+check out the hut!
 
 ```blocks
 tiles.setTilemap(tilemap`level2`)

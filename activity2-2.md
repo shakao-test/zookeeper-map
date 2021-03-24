@@ -2,13 +2,15 @@
 
 ## Step 1
 
-Welcome to the aquarium! 
-From ``||sprites:Sprites||``, drag the ``||variables:set mySprite to||`` 
-block into ``||loops:on start|``. Click on the grey box in 
-``||variables:set mySprite to||`` and draw your **favorite sea animal** to 
-see at the zoo.
+Welcome to the aquarium! We're so excited to have you designing this exhibit.
+
+To start, drag the ``||variables:set [mySprite] to sprite [ ] of kind [Player]||`` 
+block to the bottom of ``||loops:on start||``. Then click the grey box and draw your 
+**favorite sea animal** to see at the zoo.
 
 ```blocks
+tiles.setTilemap(tilemap`level3`)
+effects.bubbles.startScreenEffect()
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -30,12 +32,16 @@ let mySprite = sprites.create(img`
 ```
 
 ## Step 2 
+Just keep swimming!
 
-- ``||sprites:set [mySprite] x to [0]||`` block in ``||sprites:Sprites||``
-into ``||loops:on start||``
-- Dropdown to vx, type a number 
+Find the ``||sprites:set [mySprite] x to [0]||`` block 
+and drag it into the ``||loops:on start||`` container.  
+Replace **x** with **vx (velocity x)** using the dropdown menu.
+Try changing the number and see what happens!
 
 ```blocks
+tiles.setTilemap(tilemap`level3`)
+effects.bubbles.startScreenEffect()
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -59,12 +65,14 @@ mySprite.vx = 50
 
 ## Step 3
 
-- ``||sprites:set [mySprite] bounce on wall||`` block in ``||sprites:Sprites||``
+Oops, let's teach our fishy friend to do a flip.
 
-into ``||loops:on start||``
-- Watch the fish bounce! 
+Snap the ``||sprites:set [mySprite] bounce on wall <ON>||`` block 
+to the end of the program and check out your exhibit in the simulator!
 
 ```blocks
+tiles.setTilemap(tilemap`level3`)
+effects.bubbles.startScreenEffect()
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -89,19 +97,21 @@ mySprite.setBounceOnWall(true)
 
 
 ## Step 4
+Let's make this a little more exciting with some **randomness**.
 
-- ``||sprites:set [mySprite] x to [0]||`` block in ``||sprites:Sprites||``
+Find the ``||sprites:set [mySprite] x to [0]||`` block 
+and drag it to the bottom of the ``||loops:on start||`` container.  
+Replace **x** with **y** using the dropdown menu.
 
-into ``||loops:on start||``
-- Dropdown to y
-
-- ``||math:pick random [0] to [10]||`` block in ``||math:Math||``
-into ``||sprites:set [mySprite] x to [0]||``
-- Try some numbers out! 
-- Add a random block to the ``||sprites:set [mySprite] vx to||`` as well
+Now, from the ``||math:Math||`` category, grab a 
+``||math:pick random [0] to [10]||`` value blocks and 
+use it to replace the **0** next to the **y**. Try some 
+numbers out!
 
 
 ```blocks
+tiles.setTilemap(tilemap`level3`)
+effects.bubbles.startScreenEffect()
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -120,18 +130,28 @@ let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)    
-mySprite.y = randint(10, 130)
-mySprite.vx = randint(60, 90)
+mySprite.vx = 50
 mySprite.setBounceOnWall(true)
+mySprite.y = randint(10, 130)
 ```
 
 
 ## Step 4
+This is awesome, but it's looking a little lonely in that aquarium.
+Let's give your sea critter a few friends!
 
-- `||loops:repeat [3]||` loop, wrap your `||loops:on start||` code 
-- Try out some different numbers! School of fish!
+From the ``||loops:Loops||`` category, grab a 
+``||loops:repeat [3] times||`` loop and snap it into the 
+**on start** container **below** the ``||scene:start screen [bubbles] effect||`` 
+block.
+
+Grab everything underneath the new loop by clicking on the 
+top block. Drag that whole chunk of code up into the new
+empty **repeat** loop. 
 
 ```blocks
+tiles.setTilemap(tilemap`level3`)
+effects.bubbles.startScreenEffect()
 for (let index = 0; index < 4; index++) {
     let mySprite = sprites.create(img`
         . . . . . . . . . . . . . . . . 
@@ -151,9 +171,9 @@ for (let index = 0; index < 4; index++) {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Player)
-    mySprite.y = randint(10, 130)
-    mySprite.vx = randint(60, 90)
+    mySprite.vx = 50
     mySprite.setBounceOnWall(true)
+    mySprite.y = randint(10, 130)
 }
 ```
 ## Step 5 @showdialog
