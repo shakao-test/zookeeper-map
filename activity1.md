@@ -2,6 +2,8 @@
 
 ## Welcome @showdialog
 
+![A banner saying "ZOO" with a giraffe looking up at it](https://shakao-test.github.io/zookeeper-map/images/zoo-welcome.png)
+
 Hello there rookie! First day on the job, huh? No worries, 
 we'll show you the zookeeper ropes. First things first, 
 click that green **OK** button to see the **Keeper's Hut**.

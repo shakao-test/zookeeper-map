@@ -178,10 +178,15 @@ for (let index = 0; index < 4; index++) {
 ```
 ## Step 5 @showdialog
 
+![A clipboard with a checklist. One item is checked off](https://shakao-test.github.io/zookeeper-map/images/zoo-clipboard.png)
+
 Great work! Those fish look as happy as clams. Now it's feeding time, so let's 
 get over to-- oh no, what's this?
 
 ## Step 6 @showdialog
+
+![A rotating red siren](https://shakao-test.github.io/zookeeper-map/images/siren.gif)
+
 You're being paged! It's an urgent message from the penguin department!
 
 ## Step 7

@@ -2,6 +2,8 @@
 
 ## Step 1 @showdialog
 
+![A dirt path with a penguin looking up at a wooden sign. Several penguins are hiding in the bushes.](https://shakao-test.github.io/zookeeper-map/images/zoo-penguins.png)
+
 Oh thank goodness, you're here! The penguins are *everywhere*! 
 They managed to escape the penguin exhibit--you have to help, 
 they're eating all of the ice cream and sliding down the street!

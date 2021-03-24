@@ -130,10 +130,14 @@ mySprite.setBounceOnWall(true)
 
 ## Step 5 @showdialog
 
+![A clipboard with a checklist. One item is checked off](https://shakao-test.github.io/zookeeper-map/images/zoo-clipboard.png)
+
 This exhibit looks awesome! The other kids at the zoo are going to 
 love it-- whoa, what's that sound?
 
 ## Step 6 @showdialog
+
+![A rotating red siren](https://shakao-test.github.io/zookeeper-map/images/siren.gif)
 
 An alarm? What's going on-- Hold on, we're getting a report from the penguin department-- the
 penguins did *what*? 
