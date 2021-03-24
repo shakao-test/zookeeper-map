@@ -1,9 +1,13 @@
 # Feed the Panda
 
-## Step 1 @showdialog
+## Step 1
 
-It's feeding time! Everyone's favorite panda is hungry, so let's 
-write some code to feed them some tasty bamboo.
+It's feeding time! 
+
+Everyone's favorite panda is hungry, so let's 
+write some code to feed them some tasty bamboo. Check out the code 
+your workspace first. Right now, we create a panda, and set them 
+bouncing around the panda enclosure.
 
 ## Step 2
 
