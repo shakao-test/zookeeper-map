@@ -15,15 +15,15 @@
 * tags: easy
 
 ### zoo-activity2
-* name: First Exhibit, by Land
+* name: By Land
 * type: tutorial
-* description: Set up your a zoo exhibit! Let's take a stroll to the mammal enclosures and get your first exhibit all set up
+* description: Set up a zoo exhibit! Let's take a stroll to the mammal enclosures and get your first exhibit all set up.
 * url: https://github.com/shakao-test/zookeeper-map/activity2
 * tags: easy
 * next: zoo-activity3
 
 ### zoo-activity2-2
-* name: First Exhibit, by Sea
+* name: By Sea
 * type: tutorial
 * description: It's aquarium time! Let's go to the ocean exhibits and design some sea creatures.
 * url: https://github.com/shakao-test/zookeeper-map/activity2-2
