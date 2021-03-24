@@ -21,6 +21,9 @@ When you've helped the penguins back into the exhibit, you'll get a
 continue to other parts of the zoo.
 
 ```template
+namespace SpriteKind {
+    export const Penguin = SpriteKind.create()
+}
 let penguin: Sprite = null
 tiles.setTilemap(tilemap`level1`)
 game.onUpdateInterval(200, function () {
