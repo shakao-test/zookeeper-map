@@ -12,6 +12,8 @@ Can you look through the code and figure out how the penguins
 are escaping? Check out the `||game: on game update||` container
 block to see the code for spawning penguins.
 
+You can click on the simulator and use the arrow keys to look around!
+
 ```template
 namespace SpriteKind {
     export const Penguin = SpriteKind.create()

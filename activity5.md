@@ -3,17 +3,20 @@
 ## Step 1
 
 It's quail hatching season! The quail are laying eggs left 
-and right; let's help catch them and put them back into the 
-quail coop. First, check out the code in the workspace! You 
-have a quail-catching glove that you control with the buttons.
-Try moving it around the simulator using the arrow keys or 
-joystick.
+and right; let's catch them and put them back into the 
+quail coop. 
+
+First, check out the code in the workspace. You can move your 
+quail-catching glove with the buttons. Use the **arrow keys** or 
+**joystick** to try it out in the simulator.
 
 ## Step 2
 
 Let's catch some birds! 
-- ``||sprites:on [sprite] of kind [Player] overlaps [othersprite] of kind [Player]||``
-- Change the last argument from ``||sprites:Player||`` to ``||sprites:Quail||``
+
+Drag an ``||sprites:on [sprite] of kind [Player] overlaps [othersprite] of kind [Player]||`` 
+container into the workspace. Change the second argument to 
+``||sprites:Quail||``.
 
 ```blocks
 namespace SpriteKind {
@@ -24,21 +27,36 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Quail, function (sprite, otherSp
 ```
 
 ## Step 3
-- ``||sprites: set [myEnemy] follow [mySprite]||``
+Now, when you grab the quail, it should start following you. 
+
+From the ``||sprites:Sprites||`` drawer, drag a 
+``||sprites:set [myEnemy] follow [mySprite] ⊕||`` block into the bottom
+of the **overlaps** container.
+
+Click on the ``||variables:otherSprite||`` variable from the top of the 
+**overlaps** container and drag it down to replace the 
+``||variables:mySprite||`` argument.
 
 ```blocks
 namespace SpriteKind {
     export const Quail = SpriteKind.create()
 }
+let mySprite: Sprite = null;
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Quail, function (sprite, otherSprite) {
-    otherSprite.follow(sprite, 70)
+    otherSprite.follow(mySprite, 70)
 })
 ```
 
 ## Step 4
-- Still laying eggs! 
-- ``||sprites: set [mySprite] kind to [Player]||``
-- Change the kind to **Caught**
+The quail are still laying eggs, even when you've caught them! That's a 
+little troublesome. 
+
+From the ``||sprites:Sprites||`` drawer, drag a ``||sprites: set [mySprite] kind to [Player]||``
+to the bottom of the **overlaps** container. Drag another
+``||variables:otherSprite||`` variable from the top of the 
+**overlaps** container to replace the ``||variables:mySprite||`` 
+argument, and change the kind to **Caught**.
+Only sprites that are of kind **Quail** can lay eggs!
 
 ```blocks
 namespace SpriteKind {
@@ -52,11 +70,11 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Quail, function (sprite, otherSp
 ```
 
 ## Step 5
-- Put quail back in coop
-- ``||scene:on [sprite] of kind [Player] overlaps [ ] at [location]||``
-- Change **Player** to **Caught**
-- Change the empty tile to the *coop*
-- Drag some quail over and see what happens!
+Finally, we need to put the quail back into the coop.
+
+This time, go into the ``||scene:Scene||`` category and drag out a 
+``||scene:on [sprite] of kind [Player] overlaps [ ] at [location]||`` container.
+Change **Player** to **Caught**, and change the empty tile to the **coop** tile.
 
 ```blocks
 namespace SpriteKind {
@@ -70,8 +88,14 @@ scene.onOverlapTile(SpriteKind.Caught, assets.tile`myTile`, function (sprite, lo
 
 
 ## Step 6
-- ``||sprite:destroy [mySprite]||``
-- Drag ``||variables:sprite||`` block in
+Next, grab a ``||sprites:destroy [mySprite] ⊕||`` block and put it in the 
+overlaps container. 
+
+Click on the ``||variables:sprite||`` variable from the top of the 
+**overlaps** container and drag it down to replace the 
+``||variables:mySprite||`` argument.
+
+Drag some quail over to the coop and see what happens!
 
 ```blocks
 namespace SpriteKind {
@@ -84,9 +108,13 @@ scene.onOverlapTile(SpriteKind.Caught, assets.tile`myTile`, function (sprite, lo
 ```
 
 ## Step 7
-- Should also be able to pick up eggs! 
-- Right click on your overlaps block and duplicate
-- Change **Quail** to **Egg**
+Almost done--now you just have to deal with the pesky leftover quail eggs.
+
+Right-click on your ``||sprites:on [sprite] of kind [Player] overlaps [othersprite] of kind [Quail]||`` 
+container and select **Duplicate**. Then change the second 
+argument from **Quail** to **Egg**.
+
+Use the simulator to see how fast you can clear out the quail!
 
 ```blocks
 namespace SpriteKind {
@@ -120,7 +148,6 @@ let mySprite = sprites.create(img`
 . . . . . f f f f 8 8 8 8 8 . . 
 `, SpriteKind.Player)
 controller.moveSprite(mySprite)
-mySprite.z = 15
 ```
 
 ```assetjson
