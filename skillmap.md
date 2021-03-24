@@ -76,3 +76,4 @@
 * kind: completion
 * type: certificate
 * url: /static/skillmap/certificates/learn-to-make-a-platformer.pdf
+* imageurl: https://shakao-test.github.io/zookeeper-map/images/cert.png
