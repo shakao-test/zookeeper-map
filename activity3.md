@@ -16,9 +16,8 @@ block to see the code for spawning penguins.
 
 You can click on the simulator and use the arrow keys to look around!
 
-When you've helped the penguins back into the exhibit, you'll get a 
-"Game over!" message. You can then click on the **Finish** button to
-continue to other parts of the zoo.
+When you've helped the penguins back into the exhibit click on 
+the **Finish** button to continue to other parts of the zoo.
 
 ```template
 namespace SpriteKind {
@@ -67,6 +66,7 @@ game.onUpdateInterval(200, function () {
 }
 ```
 
+
 ```package
-zoo-extension-projects-activity3=github:shakao-test/zoo-extension/projects/activity3
+zoo-ext-penguins=github:shakao-test/zoo-ext-penguin
 ```
