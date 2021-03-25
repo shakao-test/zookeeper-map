@@ -132,7 +132,7 @@ let mySprite = sprites.create(img`
     `, SpriteKind.Player)    
 mySprite.vx = 50
 mySprite.setBounceOnWall(true)
-mySprite.y = randint(10, 130)
+mySprite.y = randint(10, 110)
 ```
 
 
@@ -173,7 +173,7 @@ for (let index = 0; index < 4; index++) {
         `, SpriteKind.Player)
     mySprite.vx = 50
     mySprite.setBounceOnWall(true)
-    mySprite.y = randint(10, 130)
+    mySprite.y = randint(10, 110)
 }
 ```
 ## Step 5 @showdialog

@@ -19,6 +19,15 @@ You can click on the simulator and use the arrow keys to look around!
 When you've helped the penguins back into the exhibit click on 
 the **Finish** button to continue to other parts of the zoo.
 
+```block
+tiles.placeOnTile(penguin, tiles.getTileLocation(1, 1))
+```
+
+Look at this block in particular. What is it doing? Where is 
+(1, 1) on the tilemap?
+
+
+
 ```template
 namespace SpriteKind {
     export const Penguin = SpriteKind.create()
