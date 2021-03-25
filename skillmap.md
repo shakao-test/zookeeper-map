@@ -9,7 +9,7 @@
 * highlightcolor: #FAED28
 
 ## zookeeper
-* name: Zookeeper Path
+* name: Zookeeper Certification
 
 ### zoo-activity1
 * allowcodecarryover: false
