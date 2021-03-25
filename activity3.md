@@ -68,5 +68,5 @@ game.onUpdateInterval(200, function () {
 
 
 ```package
-zoo-ext-penguins=github:shakao-test/zoo-ext-penguin
+zoo-ext-penguins=github:shakao-test/zoo-ext-penguin#v0.0.3
 ```

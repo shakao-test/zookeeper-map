@@ -137,5 +137,5 @@ controller.moveSprite(mySprite)
 ```
 
 ```package
-zoo-ext-quail=github:shakao-test/zoo-ext-quail
+zoo-ext-quail=github:shakao-test/zoo-ext-quail#v0.0.4
 ```
