@@ -1,3 +1,5 @@
+### @flyoutOnly true
+
 # First Day
 
 ## Welcome @showdialog
@@ -12,12 +14,11 @@ click that green **OK** button to see the **Keeper's Hut**.
 
 Here it is! Home sweet home. Let's get you set up. 
 
-From the ``||sprites:Sprites||`` category, drag the ``||variables:set [mySprite] to sprite [ ] of kind [Player]||`` 
+Drag the ``||variables:set [mySprite] to sprite [ ] of kind [Player]||`` 
 block into ``||loops:on start||``. Then click the grey box and draw yourself 
 in your best zookeeper outfit!
 
 ```blocks
-tiles.setTilemap(tilemap`level2`)
 let mySprite = sprites.create(img`
     . f f f . f f f f . f f f . 
     f f f f f c c c c f f f f f 
@@ -40,7 +41,7 @@ let mySprite = sprites.create(img`
 
 ## Step 2 
 
-Let's get moving! From ``||controller:Controller||``, drag the 
+Let's get moving! Drag the 
 ``||controller:move [mySprite] with buttons ⊕||`` block 
 into the bottom of the ``||loops:on start||`` container. 
 
@@ -49,7 +50,6 @@ Try it out in the simulator using the arrow keys on your keyboard
 or by clicking the joystick.
 
 ```blocks
-tiles.setTilemap(tilemap`level2`)
 let mySprite = sprites.create(img`
     . f f f . f f f f . f f f . 
     f f f f f c c c c f f f f f 
@@ -79,7 +79,6 @@ of the ``||loops:on start||`` container and use the arrow keys to
 check out the hut!
 
 ```blocks
-tiles.setTilemap(tilemap`level2`)
 let mySprite = sprites.create(img`
     . f f f . f f f f . f f f . 
     f f f f f c c c c f f f f f 
@@ -107,7 +106,7 @@ scene.cameraFollowSprite(mySprite)
 Fantastic! You're all ready for your first task. Click on the **Finish** button
 to move on to the **Zoo**!
 
-```template
+```customts
 tiles.setTilemap(tilemap`level2`)
 ```
 

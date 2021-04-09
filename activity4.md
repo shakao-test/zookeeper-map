@@ -1,3 +1,5 @@
+### @flyoutOnly true
+
 # Feed the Panda
 
 ## Step 1
@@ -6,8 +8,7 @@ It's feeding time!
 
 Everyone's favorite panda is hungry, so let's 
 write some code to feed them some tasty bamboo. Check out the code 
-your workspace first. Right now, we create a panda, and set them 
-bouncing around the panda enclosure.
+in your workspace first. Right now, we create a **panda** sprite.
 
 ## Step 2
 
@@ -45,10 +46,12 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 
 Now, throw it into the panda enclosure! 
 
-From the ``||scene:Scene||`` drawer, pull out a 
-``||scene: place [mySprite] on top of random [ ]||`` block and select 
-the **grass** tile. This will **place** your bamboo on a **random** 
-patch of grass. 
+Grab a ``||sprites:set [mySprite] position to x [0] y [0]||``
+block and place it in the ``||controller:on [A] button pressed ||`` container.
+
+Then put a ``||math:pick random [0] to [10]||`` value block and 
+use it to replace the **0**s next to **x** and **y**. Try out 
+some numbers to see how this places your bamboo **randomly** on the screen.
 
 Click on the simulator to the left and use the spacebar or the 
 **A** button to drop some bamboo in!
@@ -73,7 +76,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . 6 7 6 . 7 7 6 6 . . . . 
         . . . . 6 6 6 . . 7 6 . . . . . 
         `, SpriteKind.Food)
-    tiles.placeOnRandomTile(mySprite, sprites.castle.tileGrass1)
+    mySprite.setPosition(randint(10, 150), randint(10, 110))
 })
 ```
 
@@ -81,7 +84,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 
 Aw, the panda isn't very good at finding the food... let's help them out! 
 
-From the ``||sprites:Sprites||`` drawer, drag a 
+Drag a 
 ``||sprites:set [myEnemy] follow [mySprite] ⊕||`` block into the bottom
 of the ``||controller:on A button pressed||`` container. Change
 the first variable to ``||variables:panda||`` and try your code out 
@@ -150,12 +153,7 @@ sprites.onOverlap(SpriteKind.Animal, SpriteKind.Food, function (sprite, otherSpr
 })
 ```
 
-
 ```template
-namespace SpriteKind {
-    export const Animal = SpriteKind.create()
-}
-tiles.setTilemap(tilemap`level1`)
 let panda = sprites.create(img`
 . f f f . . . . f f f . . . . . 
 f c c c f f f f c c c f . . . . 
@@ -172,8 +170,19 @@ f a d 1 1 1 1 1 1 d f . . . . .
 . . f c f . . . f c f f f f c f 
 . . f f . . . . f f . . . . f f 
 `, SpriteKind.Animal)
-panda.setVelocity(70, 50)
-panda.setBounceOnWall(true)
+```
+
+```customts
+namespace SpriteKind {
+    //% isKind
+    export const Animal = SpriteKind.create()
+}
+tiles.setTilemap(tilemap`level1`)
+
+sprites.onCreated(SpriteKind.Animal, function (sprite) {
+    sprite.setVelocity(70, 50)
+    sprite.setBounceOnWall(true)
+})
 ```
 
 ```assetjson

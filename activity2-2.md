@@ -1,3 +1,5 @@
+### @flyoutOnly true
+
 # First Exhibit, by Sea
 
 ## Step 1
@@ -6,7 +8,7 @@ Welcome to the aquarium! We're so excited to have you designing this exhibit.
 
 To start, drag the ``||variables:set [mySprite] to sprite [ ] of kind [Player]||`` 
 block to the bottom of ``||loops:on start||``. Then click the grey box and draw your 
-**favorite sea animal** to see at the zoo.
+favorite sea animal to see at the zoo.
 
 ```blocks
 tiles.setTilemap(tilemap`level3`)
@@ -101,12 +103,13 @@ Let's make this a little more exciting with some **randomness**.
 
 Grab a **new** ``||sprites:set [mySprite] x to [0]||`` block 
 and drag it to the bottom of the ``||loops:on start||`` container. 
-Replace **x** with **y** using the dropdown menu.
+Replace **x** with **y** using the dropdown menu. We are going 
+to change the **vertical position** of the fish on the screen.
 
-Now, from the ``||math:Math||`` category, grab a 
-``||math:pick random [0] to [10]||`` value blocks and 
+Now grab a 
+``||math:pick random [0] to [10]||`` value block and 
 use it to replace the **0** next to the **y**. Try some 
-numbers out!
+numbers out to see how they affect the fish position!
 
 
 ```blocks
@@ -140,7 +143,7 @@ mySprite.y = randint(10, 110)
 This is awesome, but it's looking a little lonely in that aquarium.
 Let's give your sea critter a few friends!
 
-From the ``||loops:Loops||`` category, grab a 
+Grab a 
 ``||loops:repeat [3] times||`` loop and snap it into the 
 **on start** container **below** the ``||scene:start screen [bubbles] effect||`` 
 block.
@@ -193,7 +196,7 @@ You're being paged! It's an urgent message from the penguin department!
 You better get over there pronto!
 
 
-```template
+```customts
 tiles.setTilemap(tilemap`level3`)
 effects.bubbles.startScreenEffect()
 ```

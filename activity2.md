@@ -1,9 +1,11 @@
+### @flyoutOnly true
+
 # First Exhibit, by Land
 
 ## Step 1
 
 Your very first exhibit! Exciting, huh? Hm... it does look a little empty. 
-Well, what's your **favorite animal**? Let's invite them over!
+Well, what's your favorite animal? Let's invite them over!
 
 Drag the ``||variables:set [mySprite] to sprite [ ] of kind [Player]||`` 
 block into ``||loops:on start||``. Then click the grey box and draw your
@@ -68,7 +70,7 @@ mySprite.setVelocity(50, 50)
 
 Right now the movement isn't super interesting. Let's add some randomness.
 
-From the ``||math:Math||`` category, grab two 
+Now grab two 
 ``||math:pick random [0] to [10]||`` value blocks and 
 use them to replace the **50** next to the **vx** and **vy**. 
 Change the numbers around to see different kinds of movement!
@@ -99,7 +101,7 @@ mySprite.setVelocity(randint(-50, 50), randint(-50, 50))
 
 ## Step 4 
 
-Finally, when the animal hits the edge of the enclosure they just stops moving.
+Finally, when the animal hits the edge of the enclosure they just stop moving.
 
 You can fix that by taking the ``||sprites:set [mySprite] bounce on wall <ON>||`` 
 block and snapping it in at the end of the program.
@@ -146,7 +148,7 @@ penguins did *what*?
 Oh no! You better get over there!
 
 
-```template
+```customts
 tiles.setTilemap(tilemap`level2`)
 ```
 
