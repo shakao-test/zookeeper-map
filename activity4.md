@@ -122,8 +122,8 @@ Munch time! We're going to help the panda eat by running some code when the
 panda **overlaps** the bamboo. 
 
 Drag an ``||sprites:on [sprite] of kind [Player] overlaps [othersprite] of kind [Player]||`` 
-container into the workspace. Change the first dropdown to **Animal** and the 
-second to **Food**.
+container into the workspace. Click on the first ``||sprites:Player||`` dropdown menu 
+and select **Animal**. Then click the **second** dropdown and select **Food**.
 
 ```blocks
 namespace SpriteKind {
@@ -136,12 +136,9 @@ sprites.onOverlap(SpriteKind.Animal, SpriteKind.Food, function (sprite, otherSpr
 ## Step 6
 
 Next, grab a ``||sprites:destroy [mySprite] ⊕||`` block and put it in the 
-overlaps container. The panda should destroy the food!
+overlaps container. You can press the plus icon on the block to add an effect. 
+Try out **fire** or **dissolve**.
 
-To tell the **destroy** block that you want it to affect the overlapping food, 
-click on the ``||variables:otherSprite||`` variable from the top of the 
-**overlaps** container and drag it down to replace the 
-``||variables:mySprite||`` argument in ``||sprites:destroy [mySprite] ⊕||``. 
 Way to go! That panda's getting a full meal!
 
 ```blocks

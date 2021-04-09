@@ -1,3 +1,5 @@
+### @flyoutOnly true
+
 # Quail Hatching
 
 ## Step 1
@@ -6,17 +8,17 @@ It's quail hatching season! The quail are laying eggs left
 and right; let's catch them and put them back into the 
 quail coop. 
 
-First, check out the code in the workspace. You can move your 
-quail-catching glove with the buttons. Use the **arrow keys** or 
-**joystick** to try it out in the simulator.
+First, check out the code in the workspace. We create a 
+quail-catching glove and move it with the buttons. But right 
+now it doesn't do anything to catch the quail.
 
 ## Step 2
 
 Let's catch some birds! 
 
 Drag an ``||sprites:on [sprite] of kind [Player] overlaps [othersprite] of kind [Player]||`` 
-container into the workspace. Change the second argument to 
-``||sprites:Quail||``.
+container into the workspace. Click on the **second** ``||sprites:Player||`` dropdown and 
+change it to ``||sprites:Quail||``.
 
 ```blocks
 namespace SpriteKind {
@@ -29,10 +31,9 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Quail, function (sprite, otherSp
 ## Step 3
 When you grab the quail, we want it to start following you. 
 
-From the ``||sprites:Sprites||`` drawer, drag a 
-``||sprites:set [myEnemy] follow [mySprite] ⊕||`` block into the bottom
-of the **overlaps** container. Then click on the ``||variables:otherSprite||`` variable from the top of the 
-**overlaps** container and drag it down to replace the 
+Now drag a ``||sprites:set [myEnemy] follow [mySprite] ⊕||`` block into 
+the **overlaps** container. Then click on the ``||variables:otherSprite||`` 
+variable from the top of the **overlaps** container and drag it down to replace the 
 ``||variables:myEnemy||`` argument.
 
 ```blocks
@@ -100,7 +101,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Egg, function (sprite, otherSpri
 ```
 
 ```template
-tiles.setTilemap(tilemap`level1`)
 let mySprite = sprites.create(img`
 . . . . . 8 8 . 8 6 . 8 6 . . . 
 . . . . 8 6 6 8 6 7 8 6 7 6 . . 
@@ -136,6 +136,81 @@ controller.moveSprite(mySprite)
 }
 ```
 
-```package
-zoo-ext-quail=github:shakao-test/zoo-ext-quail#v0.0.4
+```customts
+namespace SpriteKind {
+    //% isKind
+    export const Quail = SpriteKind.create()
+    //% isKind
+    export const Egg = SpriteKind.create()
+}
+tiles.setTilemap(tilemap`level1`)
+sprites.onDestroyed(SpriteKind.Egg, function (sprite) {
+    quail = sprites.create(img`
+        f f . . . . . . . . . . 
+        . . f . . . . . . . . . 
+        . c c c c . . . . . . . 
+        . c 1 c c b . . . . . . 
+        f c c c b d b . . . . . 
+        . . b b b d d b . . . . 
+        . . b b b d b d b . . . 
+        . . b b b b b d d b b b 
+        . . b b b b b b b b b b 
+        . . . . b b b b b . . . 
+        . . . . . 4 . 4 . . . . 
+        . . . . . 4 . . . . . . 
+        `, SpriteKind.Quail)
+    quail.setPosition(sprite.x, sprite.y)
+    quail.setVelocity(randint(80, 120), randint(80, 120))
+    quail.setBounceOnWall(true)
+    quail.z = 10
+})
+
+let quail_egg: Sprite = null
+let quail: Sprite = null
+for (let index = 0; index < randint(3, 5); index++) {
+    quail = sprites.create(img`
+        f f . . . . . . . . . . 
+        . . f . . . . . . . . . 
+        . c c c c . . . . . . . 
+        . c 1 c c b . . . . . . 
+        f c c c b d b . . . . . 
+        . . b b b d d b . . . . 
+        . . b b b d b d b . . . 
+        . . b b b b b d d b b b 
+        . . b b b b b b b b b b 
+        . . . . b b b b b . . . 
+        . . . . . 4 . 4 . . . . 
+        . . . . . 4 . . . . . . 
+        `, SpriteKind.Quail)
+    quail.setVelocity(randint(-100, 100), randint(-100, 100))
+    quail.setPosition(randint(10, 150), randint(10, 110))
+    quail.setBounceOnWall(true)
+    quail.z = 10
+}
+game.onUpdateInterval(2000, function () {
+    if (sprites.allOfKind(SpriteKind.Quail).length < 80) {
+        for (let value of sprites.allOfKind(SpriteKind.Quail)) {
+            let following = game.currentScene().followingSprites;
+            if (!following || !following.some(el => el.self == value)) {
+                quail_egg = sprites.create(img`
+                    . . . c c . . . 
+                    . . c 1 1 c . . 
+                    . c b 1 1 b c . 
+                    c b 1 1 1 b b c 
+                    c 1 1 1 1 1 1 c 
+                    c 1 1 b 1 1 1 c 
+                    . c 1 1 1 b c . 
+                    . . c c c c . . 
+                    `, SpriteKind.Egg)
+                quail_egg.setPosition(value.x, value.y)
+                quail_egg.lifespan = randint(2000, 3000)
+            }
+        }
+    }
+})
+game.onUpdate(function() {
+    if (sprites.allOfKind(SpriteKind.Quail).length == 0 && sprites.allOfKind(SpriteKind.Egg).length == 0) {
+        game.over(true)
+    }
+})
 ```
