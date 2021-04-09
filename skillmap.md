@@ -39,7 +39,6 @@
 * url: https://github.com/shakao-test/zookeeper-map/activity2-2
 * imageurl: https://shakao-test.github.io/zookeeper-map/images/activity2-2.png
 * tags: easy
-* next: zoo-activity3
 
 ### zoo-activity3
 * allowcodecarryover: false
@@ -59,7 +58,7 @@
 * url: https://github.com/shakao-test/zookeeper-map/activity4
 * imageurl: https://shakao-test.github.io/zookeeper-map/images/activity4.png
 * tags: easy
-* next: zoo-activity5, zoo-complete
+* next: zoo-activity5
 
 ### zoo-activity5
 * allowcodecarryover: false
@@ -69,6 +68,7 @@
 * url: https://github.com/shakao-test/zookeeper-map/activity5
 * imageurl: https://shakao-test.github.io/zookeeper-map/images/activity5.png
 * tags: intermediate
+* next: zoo-complete
 
 ### zoo-complete
 * allowcodecarryover: false
